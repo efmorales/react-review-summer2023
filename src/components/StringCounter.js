@@ -1,9 +1,13 @@
 import React from 'react'
 
 const StringCounter = (props) => {
-  return (
-    <div>{props.madeUpProperty}</div>
-  )
+    return (
+        <>
+            <div>StringCounter!</div>
+            <p>String: {props.inputString}</p>
+            <p>String length: {props.inputString.length}</p>
+        </>
+    )
 }
 
 export default StringCounter
