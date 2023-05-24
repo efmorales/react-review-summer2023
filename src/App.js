@@ -21,6 +21,7 @@ function App() {
   const [helloWorld, setHelloWorld] = useState("Hello World");
   const [inputString, setInputString] = useState("default string");
   const [num, setNum] = useState(0);
+  const calcArray = ["Add", "Subtract", "Multiply", "Divide", "Square"];
 
   const setHelloWorldState = () => {
     setHelloWorld("Hello Coders")
@@ -52,30 +53,41 @@ function App() {
         <h3> Calculator </h3>
         <h4>Number: {num}</h4>
 
-        < CalcButton 
-        name={"Add"}
-        num={num}
-        setNum={setNum} />
+        {
+          calcArray.map(element => {
+            return (
+              < CalcButton
+                name={element}
+                num={num}
+                setNum={setNum} />
+            )
+          })
+        }
 
-        < CalcButton 
-        name={"Subtract"}
-        num={num}
-        setNum={setNum} />
+        {/* < CalcButton
+          name={"Add"}
+          num={num}
+          setNum={setNum} />
 
-        < CalcButton 
-        name={"Divide"}
-        num={num}
-        setNum={setNum} />
+        < CalcButton
+          name={"Subtract"}
+          num={num}
+          setNum={setNum} />
 
-        < CalcButton 
-        name={"Multiply"}
-        num={num}
-        setNum={setNum} />
+        < CalcButton
+          name={"Divide"}
+          num={num}
+          setNum={setNum} />
 
-        < CalcButton 
-        name={"Square"}
-        num={num}
-        setNum={setNum} />
+        < CalcButton
+          name={"Multiply"}
+          num={num}
+          setNum={setNum} />
+
+        < CalcButton
+          name={"Square"}
+          num={num}
+          setNum={setNum} /> */}
 
       </div>
     </div>
